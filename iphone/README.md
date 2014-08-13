@@ -3,9 +3,10 @@ PropsPlus
 
 This CommonJS module enables you to create Titanium Properties with less code, and more options like saving a function as a property.
 
-##Commands
+#Commands
 
-#.setProperty(identifier, value)
+##.setProperty(identifier, value)
+
 Creates a property with a value that can be accessed by .getProperty(), value can be of the following types:
 
 - String (like Ti.App.Properties.setString)
@@ -14,3 +15,17 @@ Creates a property with a value that can be accessed by .getProperty(), value ca
 - Object (like Ti.App.Properties.setObject)
 - Function (not in standard SDK)
 
+```javascript
+PropsPlus.setProperty("function", function(){
+  alert("Hello world!")
+});
+```
+
+##.getProperty(identifier)
+
+Retrieves the value of the property identified by the given identifier
+
+```javascript
+var func = PropsPlus.getProperty("function");
+func(); //alerts "Hello world!" (see previous command)
+```
