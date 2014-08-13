@@ -3,6 +3,10 @@ PropsPlus
 
 This CommonJS module enables you to create Titanium Properties with less code, and more options like saving a function as a property.
 
+##TODO:
+- List properties
+- Save circular objects as property
+
 #Commands
 
 ##.setProperty(identifier, value)
@@ -37,4 +41,23 @@ Returns ```true``` if property exists or ```false``` if it doesn't (same as ```T
 ```javascript
 var propExists = PropsPlus.hasProperty("function");
 Ti.API.info("Does property exist: "+propExists); //true
+```
+#Examples
+
+##Save a view as a property:
+
+```javascript
+var win = Ti.UI.createWindow();
+
+PropsPlus.setProperty("blackSquare", function(){
+  return Ti.UI.createView({
+    height: 100,
+    width: 100,
+    backgroundColor: "black"
+  });
+});
+
+win.add(PropsPlus.getProperty("blackSquare"));
+
+win.open();
 ```
