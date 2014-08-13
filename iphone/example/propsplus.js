@@ -19,7 +19,7 @@ function getProperty(identifier, type) {
 			return Ti.App.Properties.getObject(identifier+addition).value;
 		}else{
 			var funcAsString = Ti.App.Properties.getObject(identifier+addition).value;
-			var fixedString = funcAsString.replace(funcAsString.split("{")[0], "function()");
+			var fixedString = funcAsString.replace(funcAsString.split("(")[0], "function()");
 			eval("var func = "+fixedString);
 			return func;
 		}
