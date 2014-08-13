@@ -23,9 +23,13 @@ PropsPlus.setProperty("function", function(){
 
 ##.getProperty(identifier)
 
-Retrieves the value of the property identified by the given identifier
+Returns the value of the property identified by the given identifier, if property doesn't exist it returns ```javascript undefined```
 
 ```javascript
 var func = PropsPlus.getProperty("function");
 func(); //alerts "Hello world!" (see previous command)
 ```
+
+##.hasProperty(identifier)
+
+R
