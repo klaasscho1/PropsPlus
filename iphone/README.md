@@ -79,6 +79,44 @@ var backToFunction = PropsPlus.getProperty("function");
 backToFunction(); // "Hello World!"
 
 ```
+##Save property as integer if it has no decimals, and as double if it does
+```javascript
+var numberInt = 1;
+var numberDouble = 2.32;
+
+
+//---Standard SDK
+
+//Set
+
+function saveNumber(name, number){
+  if(number%1==0){
+    Ti.App.Properties.setInt(name, number);
+  }else{
+    Ti.App.Properties.setDouble(name, number);
+  }
+}
+
+saveNumber("int", numberInt);
+saveNumber("double", numberDouble);
+
+//Get
+
+//You are unable to get the property back in the standard SDK unless you know if it is an Int or a Double
+
+
+//---PropsPlus
+
+//Set
+
+PropsPlus.setProperty("int", numberInt);
+PropsPlus.setProperty("double", numberDouble);
+
+//Get
+
+PropsPlus.getProperty("int"); //1
+PropsPlus.getProperty("double"); //2.32
+```
 
 #Examples
 
