@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+description: PropsPlus
+author: Klaas Schoenmaker
+license: LICENSE.txt
+copyright: Copyright (c) 2014 by Studio K!
+
+# these should not be edited
+name: PropsPlus
+moduleid: com.studiokapps.propsplus
+guid: fb7fb724-d498-4cbd-bf3b-1684ccf65cc2
+platform: iphone
+minsdk: 3.3.0.GA
