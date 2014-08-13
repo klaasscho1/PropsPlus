@@ -42,6 +42,44 @@ Returns ```true``` if property exists or ```false``` if it doesn't (same as ```T
 var propExists = PropsPlus.hasProperty("function");
 Ti.API.info("Does property exist: "+propExists); //true
 ```
+
+#Comparison
+
+##Saving a function as a property
+
+```javascript
+var testFunction = function(){
+  Ti.API.info("Hello World!");
+}
+
+
+//---Standard SDK
+
+//Set
+
+var setFunctionAsString = testFunction.toString();
+Ti.App.Properties.setString("function", functionAsString);
+
+//Get
+
+var getFunctionAsString = Ti.App.Properties.getString("function");
+eval("var backToFunction = "+getFunctionAsString);
+backToFunction(); // "Hello World!"
+
+
+//---PropsPlus
+
+//Set
+
+PropsPlus.setProperty("function", testFunction);
+
+//Get
+
+var backToFunction = PropsPlus.getProperty("function");
+backToFunction(); // "Hello World!"
+
+```
+
 #Examples
 
 ##Save a view as a property:
