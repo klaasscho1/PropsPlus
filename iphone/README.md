@@ -7,12 +7,12 @@ This CommonJS module enables you to create Titanium Properties with less code, a
 
 ##.setProperty(identifier, value)
 
-Creates a property with a value that can be accessed by .getProperty(), value can be of the following types:
+Creates a property with a value that can be accessed by ```.getProperty()```, value can be of the following types:
 
-- String (like Ti.App.Properties.setString)
-- Number (like Ti.App.Properties.setInt or Ti.App.Properties.setDouble)
-- Array (like Ti.App.Properties.setList)
-- Object (like Ti.App.Properties.setObject)
+- String (like ```Ti.App.Properties.setString```)
+- Number (like ```Ti.App.Properties.setInt``` or ```Ti.App.Properties.setDouble```)
+- Array (like ```Ti.App.Properties.setList```)
+- Object (like ```Ti.App.Properties.setObject```)
 - Function (not in standard SDK)
 
 ```javascript
@@ -23,7 +23,7 @@ PropsPlus.setProperty("function", function(){
 
 ##.getProperty(identifier)
 
-Returns the value of the property identified by the given identifier, if property doesn't exist it returns ```undefined```
+Returns the value of the property identified by the given identifier, returns ```undefined``` if property doesn't exists
 
 ```javascript
 var func = PropsPlus.getProperty("function");
@@ -32,7 +32,7 @@ func(); //alerts "Hello world!" (see previous command)
 
 ##.hasProperty(identifier)
 
-Returns ```true``` if property exists or ```false``` if it doesn't (same as Ti.App.Properties.hasProperty)
+Returns ```true``` if property exists or ```false``` if it doesn't (same as ```Ti.App.Properties.hasProperty```)
 
 ```javascript
 var propExists = PropsPlus.hasProperty("function");
