@@ -23,7 +23,7 @@ PropsPlus.setProperty("function", function(){
 
 ##.getProperty(identifier)
 
-Returns the value of the property identified by the given identifier, if property doesn't exist it returns ```javascript undefined```
+Returns the value of the property identified by the given identifier, if property doesn't exist it returns ```undefined```
 
 ```javascript
 var func = PropsPlus.getProperty("function");
@@ -32,4 +32,9 @@ func(); //alerts "Hello world!" (see previous command)
 
 ##.hasProperty(identifier)
 
-R
+Returns ```true``` if property exists or ```false``` if it doesn't (same as Ti.App.Properties.hasProperty)
+
+```javascript
+var propExists = PropsPlus.hasProperty("function");
+Ti.API.info("Does property exist: "+propExists); //true
+```
