@@ -6,7 +6,7 @@ version: 1.0.0
 apiversion: 2
 description: PropsPlus
 author: Klaas Schoenmaker
-license: LICENSE.txt
+license: 
 copyright: Copyright (c) 2014 by Studio K!
 
 # these should not be edited
